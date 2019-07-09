@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190704 06:06:08.681" generator="Robot 3.1.1 (Python 2.7.14 on win32)">
+<suite source="C:\Users\sowkath.abdulbari\Desktop\24-06\04-july\AngularWebAutomation\TestCases\TC_003_Appointment.robot" id="s1" name="TC 003 Appointment">
+<test id="s1-t1" name="Adding prescription in VIDA Plus application TC_001">
+<kw name="User Open Browser" library="CommonKewwords">
+<arguments>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${ApplicationUrl}</arg>
+<arg>${BrowserName}</arg>
+</arguments>
+<msg timestamp="20190704 06:06:09.099" level="INFO">Opening browser 'Chrome' to base url 'http://dev.k8s.local/#/login'</msg>
+<status status="PASS" endtime="20190704 06:06:20.085" starttime="20190704 06:06:09.099"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190704 06:06:21.225" starttime="20190704 06:06:20.085"></status>
+</kw>
+<status status="PASS" endtime="20190704 06:06:21.226" starttime="20190704 06:06:09.098"></status>
+</kw>
+<kw name="User Login to Application" library="CommonKewwords">
+<arguments>
+<arg>adela</arg>
+<arg>123</arg>
+</arguments>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@formcontrolname='username']</arg>
+<arg>${uname}</arg>
+</arguments>
+<msg timestamp="20190704 06:06:21.228" level="INFO">Typing text 'adela' into text field 'xpath=//input[@formcontrolname='username']'</msg>
+<status status="PASS" endtime="20190704 06:06:21.523" starttime="20190704 06:06:21.228"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@formcontrolname='password']</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20190704 06:06:21.524" level="INFO">Typing text '123' into text field 'xpath=//input[@formcontrolname='password']'</msg>
+<status status="PASS" endtime="20190704 06:06:21.690" starttime="20190704 06:06:21.524"></status>
+</kw>
+<kw name="Click Button" library="ExtendedSelenium2Library">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[text()='Login']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:21.690" level="INFO">Clicking button 'xpath=//button[text()='Login']'.</msg>
+<status status="PASS" endtime="20190704 06:06:22.370" starttime="20190704 06:06:21.690"></status>
+</kw>
+<status status="PASS" endtime="20190704 06:06:22.370" starttime="20190704 06:06:21.227"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='Appointments']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:22.372" level="INFO">Clicking element 'xpath=//a[text()='Appointments']'.</msg>
+<status status="PASS" endtime="20190704 06:06:27.002" starttime="20190704 06:06:22.371"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//label[text()='Search Patient']/following-sibling::div/input</arg>
+<arg>${MRNnumber}</arg>
+</arguments>
+<msg timestamp="20190704 06:06:27.008" level="INFO">Typing text '9034' into text field 'xpath=//label[text()='Search Patient']/following-sibling::div/input'</msg>
+<status status="PASS" endtime="20190704 06:06:27.362" starttime="20190704 06:06:27.007"></status>
+</kw>
+<kw name="Click Button" library="ExtendedSelenium2Library">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[text()='Split button!']/parent::button</arg>
+</arguments>
+<msg timestamp="20190704 06:06:27.363" level="INFO">Clicking button 'xpath=//span[text()='Split button!']/parent::button'.</msg>
+<status status="PASS" endtime="20190704 06:06:28.102" starttime="20190704 06:06:27.363"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='MRN No']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:28.103" level="INFO">Clicking element 'xpath=//a[text()='MRN No']'.</msg>
+<status status="PASS" endtime="20190704 06:06:28.767" starttime="20190704 06:06:28.103"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//div[@ng-reflect-klass='pat-appt-gen apt-male-']</arg>
+</arguments>
+<status status="PASS" endtime="20190704 06:06:28.786" starttime="20190704 06:06:28.768"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@ng-reflect-klass='pat-appt-gen apt-male-']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:28.788" level="INFO">Clicking element 'xpath=//div[@ng-reflect-klass='pat-appt-gen apt-male-']'.</msg>
+<status status="PASS" endtime="20190704 06:06:29.476" starttime="20190704 06:06:28.787"></status>
+</kw>
+<kw name="Select From List By Label" library="ExtendedSelenium2Library">
+<doc>Selects ``*labels`` from list identified by ``locator``.
+Select list keywords work on both lists and combo boxes.</doc>
+<arguments>
+<arg>xpath=//label[contains(text(),'Select Hospital')]/following-sibling::select</arg>
+<arg>Rayyan</arg>
+</arguments>
+<msg timestamp="20190704 06:06:29.476" level="INFO">Selecting label(s) 'Rayyan' from list 'xpath=//label[contains(text(),'Select Hospital')]/following-sibling::select'.</msg>
+<status status="PASS" endtime="20190704 06:06:29.978" starttime="20190704 06:06:29.476"></status>
+</kw>
+<kw name="Select From List By Label" library="ExtendedSelenium2Library">
+<doc>Selects ``*labels`` from list identified by ``locator``.
+Select list keywords work on both lists and combo boxes.</doc>
+<arguments>
+<arg>xpath=//label[contains(text(),'Select Clinic')]/following-sibling::select</arg>
+<arg>CARDIOLOGY</arg>
+</arguments>
+<msg timestamp="20190704 06:06:29.980" level="INFO">Selecting label(s) 'CARDIOLOGY' from list 'xpath=//label[contains(text(),'Select Clinic')]/following-sibling::select'.</msg>
+<status status="PASS" endtime="20190704 06:06:30.341" starttime="20190704 06:06:29.979"></status>
+</kw>
+<kw name="Select From List By Label" library="ExtendedSelenium2Library">
+<doc>Selects ``*labels`` from list identified by ``locator``.
+Select list keywords work on both lists and combo boxes.</doc>
+<arguments>
+<arg>xpath=//label[contains(text(),'Select Doctor')]/following-sibling::select</arg>
+<arg>EHR-Doctor</arg>
+</arguments>
+<msg timestamp="20190704 06:06:30.342" level="INFO">Selecting label(s) 'EHR-Doctor' from list 'xpath=//label[contains(text(),'Select Doctor')]/following-sibling::select'.</msg>
+<status status="PASS" endtime="20190704 06:06:32.655" starttime="20190704 06:06:30.342"></status>
+</kw>
+<kw name="Click Button" library="ExtendedSelenium2Library">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[text()='View']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:32.656" level="INFO">Clicking button 'xpath=//button[text()='View']'.</msg>
+<status status="PASS" endtime="20190704 06:06:33.393" starttime="20190704 06:06:32.656"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//li[contains(text(),'Rayyan')]/parent::ul</arg>
+</arguments>
+<status status="PASS" endtime="20190704 06:06:38.858" starttime="20190704 06:06:33.393"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//li[contains(text(),'Rayyan')]/parent::ul</arg>
+</arguments>
+<msg timestamp="20190704 06:06:38.860" level="INFO">Clicking element 'xpath=//li[contains(text(),'Rayyan')]/parent::ul'.</msg>
+<status status="PASS" endtime="20190704 06:06:39.667" starttime="20190704 06:06:38.859"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//td[text()='${TimeSlot}:00']/parent::tr//div[contains(text(),'EHR-Doctor')]</arg>
+</arguments>
+<status status="PASS" endtime="20190704 06:06:39.694" starttime="20190704 06:06:39.668"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//td[text()='${TimeSlot}:00']/parent::tr//div[contains(text(),'EHR-Doctor')]</arg>
+</arguments>
+<msg timestamp="20190704 06:06:39.696" level="INFO">Clicking element 'xpath=//td[text()='17:00']/parent::tr//div[contains(text(),'EHR-Doctor')]'.</msg>
+<status status="PASS" endtime="20190704 06:06:40.520" starttime="20190704 06:06:39.695"></status>
+</kw>
+<kw name="Select Checkbox" library="ExtendedSelenium2Library">
+<doc>Selects checkbox identified by ``locator``.
+Does nothing if checkbox is already selected.</doc>
+<arguments>
+<arg>xpath=//label[contains(text(),'M')][last()]/preceding-sibling::input</arg>
+</arguments>
+<msg timestamp="20190704 06:06:40.521" level="INFO">Selecting checkbox 'xpath=//label[contains(text(),'M')][last()]/preceding-sibling::input'.</msg>
+<status status="PASS" endtime="20190704 06:06:40.674" starttime="20190704 06:06:40.521"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190704 06:06:45.677" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20190704 06:06:45.677" starttime="20190704 06:06:40.676"></status>
+</kw>
+<kw name="Click Button" library="ExtendedSelenium2Library">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[text()='Book']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:45.678" level="INFO">Clicking button 'xpath=//button[text()='Book']'.</msg>
+<status status="PASS" endtime="20190704 06:06:46.600" starttime="20190704 06:06:45.678"></status>
+</kw>
+<kw name="Select From List By Label" library="ExtendedSelenium2Library">
+<doc>Selects ``*labels`` from list identified by ``locator``.
+Select list keywords work on both lists and combo boxes.</doc>
+<arguments>
+<arg>xpath=//label[contains(text(),'Visit Type')]/following-sibling::select</arg>
+<arg>Consultation</arg>
+</arguments>
+<msg timestamp="20190704 06:06:46.601" level="INFO">Selecting label(s) 'Consultation' from list 'xpath=//label[contains(text(),'Visit Type')]/following-sibling::select'.</msg>
+<status status="PASS" endtime="20190704 06:06:46.876" starttime="20190704 06:06:46.601"></status>
+</kw>
+<kw name="Click Button" library="ExtendedSelenium2Library">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[text()='Confirm']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:46.877" level="INFO">Clicking button 'xpath=//button[text()='Confirm']'.</msg>
+<status status="PASS" endtime="20190704 06:06:47.613" starttime="20190704 06:06:46.876"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20190704 06:06:50.614" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190704 06:06:50.614" starttime="20190704 06:06:47.613"></status>
+</kw>
+<kw name="Execute Javascript" library="ExtendedSelenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>$('html,body').scrollTop(0);</arg>
+</arguments>
+<msg timestamp="20190704 06:06:50.616" level="INFO">Executing JavaScript:
+$('html,body').scrollTop(0);</msg>
+<status status="PASS" endtime="20190704 06:06:50.630" starttime="20190704 06:06:50.615"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='Resource Registration']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:50.632" level="INFO">Clicking element 'xpath=//a[text()='Resource Registration']'.</msg>
+<status status="PASS" endtime="20190704 06:06:51.605" starttime="20190704 06:06:50.632"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='Appointments']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:51.606" level="INFO">Clicking element 'xpath=//a[text()='Appointments']'.</msg>
+<status status="PASS" endtime="20190704 06:06:52.487" starttime="20190704 06:06:51.606"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//label[text()='Search Patient']/following-sibling::div/input</arg>
+<arg>${MRNnumber}</arg>
+</arguments>
+<msg timestamp="20190704 06:06:52.489" level="INFO">Typing text '9034' into text field 'xpath=//label[text()='Search Patient']/following-sibling::div/input'</msg>
+<status status="PASS" endtime="20190704 06:06:52.710" starttime="20190704 06:06:52.488"></status>
+</kw>
+<kw name="Click Button" library="ExtendedSelenium2Library">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[text()='Split button!']/parent::button</arg>
+</arguments>
+<msg timestamp="20190704 06:06:52.711" level="INFO">Clicking button 'xpath=//span[text()='Split button!']/parent::button'.</msg>
+<status status="PASS" endtime="20190704 06:06:53.478" starttime="20190704 06:06:52.711"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='MRN No']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:53.480" level="INFO">Clicking element 'xpath=//a[text()='MRN No']'.</msg>
+<status status="PASS" endtime="20190704 06:06:54.210" starttime="20190704 06:06:53.479"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//div[@ng-reflect-klass='pat-appt-gen apt-male-']</arg>
+</arguments>
+<status status="PASS" endtime="20190704 06:06:54.322" starttime="20190704 06:06:54.211"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@ng-reflect-klass='pat-appt-gen apt-male-']</arg>
+</arguments>
+<msg timestamp="20190704 06:06:54.324" level="INFO">Clicking element 'xpath=//div[@ng-reflect-klass='pat-appt-gen apt-male-']'.</msg>
+<status status="PASS" endtime="20190704 06:06:55.188" starttime="20190704 06:06:54.323"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190704 06:07:00.191" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20190704 06:07:00.192" starttime="20190704 06:06:55.189"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>click element</arg>
+<arg>xpath=//a[@title='Confirm']</arg>
+</arguments>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@title='Confirm']</arg>
+</arguments>
+<msg timestamp="20190704 06:07:00.196" level="INFO">Clicking element 'xpath=//a[@title='Confirm']'.</msg>
+<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190704 06:07:01.109" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20190704 06:07:01.110" starttime="20190704 06:07:01.065"></status>
+</kw>
+<msg timestamp="20190704 06:07:01.110" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20190704 06:07:01.137" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20190704 06:07:01.137" starttime="20190704 06:07:00.196"></status>
+</kw>
+<status status="PASS" endtime="20190704 06:07:01.138" starttime="20190704 06:07:00.193"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>click element</arg>
+<arg>xpath=//a[@title='Patient Arrived']</arg>
+</arguments>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@title='Patient Arrived']</arg>
+</arguments>
+<msg timestamp="20190704 06:07:01.144" level="INFO">Clicking element 'xpath=//a[@title='Patient Arrived']'.</msg>
+<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190704 06:07:01.171" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20190704 06:07:01.172" starttime="20190704 06:07:01.151"></status>
+</kw>
+<msg timestamp="20190704 06:07:01.173" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20190704 06:07:01.196" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20190704 06:07:01.197" starttime="20190704 06:07:01.143"></status>
+</kw>
+<status status="PASS" endtime="20190704 06:07:01.197" starttime="20190704 06:07:01.141"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190704 06:07:06.200" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20190704 06:07:06.201" starttime="20190704 06:07:01.199"></status>
+</kw>
+<kw name="Get Alert Message" library="ExtendedSelenium2Library">
+<doc>Returns the text of current JavaScript alert.</doc>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20190704 06:07:06.225" level="INFO">${x} = Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM</msg>
+<status status="PASS" endtime="20190704 06:07:06.226" starttime="20190704 06:07:06.203"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190704 06:07:11.230" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20190704 06:07:11.230" starttime="20190704 06:07:06.228"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" endtime="20190704 06:07:11.234" starttime="20190704 06:07:11.232"></status>
+</kw>
+<status status="PASS" endtime="20190704 06:07:11.236" critical="yes" starttime="20190704 06:06:09.097"></status>
+</test>
+<status status="PASS" endtime="20190704 06:07:11.257" starttime="20190704 06:06:08.684"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TC 003 Appointment" pass="1">TC 003 Appointment</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190704 06:07:01.110" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20190704 06:07:01.173" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : Are you sure you want to confirm appointment on  04-07-2019 at 05:30 PM}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+</errors>
+</robot>
